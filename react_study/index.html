@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS초보입니다.</h1>
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+        // 문서에서 아이디가 hello인 요소를 가져와라. 그 안에 들어있는 html내용을 '안녕'으로 변경해달라는 의미.
+        // = 는 '같다'라는 의미가 아닌 우측 요소를 왼쪽으로 넣어달라는 의미.
+        // document.getElementById('?? => 바꿀 html요소 id').??=>어떤걸 = '??무엇으로 변경';
+        document.getElementById('hello').style.color = 'red';
+        //색상도 변경가능하고 src를 변경하는 것도 가능하다!
+
+        document.getElementById('hi').innerHTML = 'JS고수입니다.';
+    </script>
+</body>
+</html>
