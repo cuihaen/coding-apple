@@ -9,7 +9,7 @@
 </head>
 <body>
     
-<div class="alert-box" id="alert">알림창임<button onclick="showBox('none');">닫기</button></div>
+<div class="alert-box" id="alert"><p id="text">알림창임</p><button onclick="showBox('none');">닫기</button></div>
 <!-- <button onclick="이 위치에 JS코드 삽입 가능">버튼</button> -->
 <button onclick="showBox('block','아이디를 입력하세요.');">버튼1</button>
 <button onclick="showBox('block','비밀번호를 입력하세요.');">버튼2</button>
@@ -20,7 +20,7 @@
     // 파라미터='구멍'자리에 원하는 것을 쉽게 넣어 함수를 실행할 수 있다.(함수를 여러개 사용하지 않을 수 있음)
     // function과 파라미터는 필수문법이 아님.
     function showBox (구멍,구멍2){
-        document.getElementById('alert').innerHTML=구멍2
+        document.getElementById('text').innerHTML=구멍2
         document.getElementById('alert').style.display=구멍
     }
 
