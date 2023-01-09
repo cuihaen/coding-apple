@@ -1,16 +1,8 @@
-<<<<<<< HEAD
+
 .list-group{
     display: none;
 }
 
 .list-group.show{
     display: block;
-=======
-.alert-box{
-    background-color: skyblue;
-    padding:20px;
-    color:#fff;
-    border-radius: 5px;
-    display: none;
->>>>>>> a774b03 (폴더명 변경)
 }
