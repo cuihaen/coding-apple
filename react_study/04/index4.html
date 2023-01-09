@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    
+<div class="alert-box" id="alert"><p id="text">알림창임</p><button id="close">닫기</button></div>
+<!-- <button onclick="이 위치에 JS코드 삽입 가능">버튼</button> -->
+<button onclick="showBox('block','아이디를 입력하세요.');">버튼1</button>
+<button onclick="showBox('block','비밀번호를 입력하세요.');">버튼2</button>
+
+<script>
+ //이벤트리스너를 활용하면 onclick을 하지 않고도 바로 스크립트를 원하는 요소에 부여해줄 수 있다.
+ //click외에도 mouseover와 같은 여러 eventListener가 있음!
+ //파라미터 자리에 들어가는 함수 =>function(){} = 콜백함수라고 부른다.
+document.getElementById('close').addEventListener('click',function(){
+    // 클릭 시 실행할 코드~~~
+    document.getElementById('alert').style.display='none';
+})
+
+    function showBox (구멍,구멍2){
+        document.getElementById('text').innerHTML=구멍2
+        //document.getElementByClassName('text')[0].innerHTML=구멍2 
+        //→ id가 아니더라도 class명으로 요소를 찾을 수 있다. 단 반드시 위에서부터 몇번째인지 []안에 인덱스 번호를 입력해야함!
+        document.getElementById('alert').style.display=구멍
+    }
+
+</script>
+    
+</body>
+</html>
