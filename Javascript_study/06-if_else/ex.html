@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" id="id_box">
                 </div>
                 <div class="my-3">
-                    <input type="password" class="form-control">
+                    <input type="password" class="form-control" id="password_box">
                 </div>
                 <button type="submit" class="btn btn-primary" id="send">전송</button>
                 <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -48,7 +48,12 @@
         //전송버튼을 누를 시 input에 입력한 값이 공백이면 알림창을 띄워달라.(조건문) - 숙제!
         document.querySelector('form').addEventListener('submit',function(){
             if(document.getElementById('id_box').value==''){
-                alert('아이디와 비밀번호를 모두 입력해주세요.')
+                alert('아이디를 입력해주세요.')
+            }else if(document.getElementById('password_box').value==''){
+                //.value.length = 글자 수 조건을 걸 수 있음.
+                alert('비밀번호를 입력해주세요.')
+            }else{
+                alert('로그인 되었습니다.')
             }
         })
 
