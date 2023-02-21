@@ -1,14 +1,14 @@
  // 첫번째 carousel
- const carouselItems = document.querySelector('.carouselItems1');
- const carouselItem = document.querySelectorAll('.carouselItems1 li');
+ const carouselItems = document.querySelector('.carouselItems');
+ const carouselItem = document.querySelectorAll('.carouselItems li');
 
  const carouselItemCount = carouselItem.length;
  let currentIndex = 0;
  let carouselWidth = carouselItem[0].clientWidth;
  console.log(carouselWidth);
  const carouselMargin = 4;
- const rightBtn = document.querySelector('.conBtn1.right');
- const leftBtn = document.querySelector('.conBtn1.left');
+ const rightBtn = document.querySelector('.conBtn.right');
+ const leftBtn = document.querySelector('.conBtn.left');
  
  cloneItems();
    
@@ -36,7 +36,7 @@
  }
    
  function updateWidth(){
-   let currentCarouselItem = document.querySelectorAll('.carouselItems1 li');
+   let currentCarouselItem = document.querySelectorAll('.carouselItems li');
    let carouselItemCount = currentCarouselItem.length;
  
    let newWidth = (carouselWidth + carouselMargin) * carouselItemCount - carouselMargin + 'px';
