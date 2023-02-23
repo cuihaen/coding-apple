@@ -49,7 +49,30 @@
                 console.log('불합격');
             }
         }
+
+        //369game 응용문제 - 실제 3,6,9게임처럼 끝자리가 맞으면 박수!
+        function 삼육구게임(num){
+            if(num % 10 == 3 || num % 10 == 6 || num % 10 == 9){
+                console.log('박수');
+            }else{
+                console.log('통과');
+            }
+        }
+
+        //박수 여러번 치게하기
+        //1. for문 활용
+        let 박수 = '';
+        for(let i = 0; i < String(num).length; i++){
+            if(String(num)[i] == '3' || String(num)[i] == '6' || String(num)[i] == '9'){
+                박수 = 박수 + '박수';
+            }
+        }
         
+        console.log(박수 == ''?'통과' : '박수');
+
+        //2. for없이 - 해당 풀이는 처음보는 문법이므로 별도의 학습 필요.
+        let 박수2 = String(num).replace(/[3,6,9]/g,'박수').replace(/[0-9]/g,'');
+        console.log(박수2 == '' ? '통과' : 박수2);
     </script>
 </body>
 </html>
