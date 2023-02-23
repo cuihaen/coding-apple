@@ -31,8 +31,19 @@
         game369(18);
 
         //공인중개사 시험점수 입력 시 합격/불합격 알려주는 함수
-        function score(num1,num2){
-            if(num1+num2 >= 120 && num1>=40 &&num2>=40){
+        // function score(num1,num2){
+        //     if(num1+num2 >= 120 && num1>=40 &&num2>=40){
+        //         console.log('합격');
+        //     }else{
+        //         console.log('불합격');
+        //     }
+        // }
+
+        //답안지 정답
+        function 합격했냐(a,b){
+            if(a<40 || b<40){
+                console.log('불합격');
+            }else if(a+b >=120){
                 console.log('합격');
             }else{
                 console.log('불합격');
