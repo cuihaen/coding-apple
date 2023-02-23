@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>if/else,function 실력향상 과제 - 369게임</title>
+    <title>if/else,function 실력향상 과제</title>
 </head>
 <body>
     <script>
@@ -29,6 +29,15 @@
         }
 
         game369(18);
+
+        //공인중개사 시험점수 입력 시 합격/불합격 알려주는 함수
+        function score(num1,num2){
+            if(num1+num2 >= 120 && num1>=40 &&num2>=40){
+                console.log('합격');
+            }else{
+                console.log('불합격');
+            }
+        }
         
     </script>
 </body>
