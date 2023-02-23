@@ -1,4 +1,7 @@
-
+body.dark{
+    background:  #333;
+    color:#fff;
+}
 .list-group{
     display: none;
 }

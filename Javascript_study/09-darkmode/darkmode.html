@@ -51,10 +51,12 @@
         let count = 0;
         document.querySelector('.badge').addEventListener('click',function(){
             count++;
+            document.querySelector('body').classList.toggle('dark');
             if(count % 2 == 1){
-                document.querySelector('.badge').innerHTML='Light⭐️';
+                document.querySelector('.badge').innerHTML='Dark🌙'; 
+                
             }else if(count % 2 == 0){
-                document.querySelector('.badge').innerHTML='Darkt🌙'; 
+                document.querySelector('.badge').innerHTML='Light⭐️';
             }
         })
     </script>
