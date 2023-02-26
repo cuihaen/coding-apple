@@ -49,6 +49,19 @@
         5초 이내 구매시 사은품 증정!
     </div>
     <span class="badge bg-dark ms-auto mx-3">Dark🌙</span>
+    <div style="overflow: hidden">
+        <div class="slide-container">
+          <div class="slide-box">
+            <img src="car1.png">
+          </div>
+          <div class="slide-box">
+            <img src="car2.png">
+          </div>
+          <div class="slide-box">
+            <img src="car3.png">
+          </div>
+        </div>
+     </div> 
 
     <script>
         let count = 0;
@@ -86,6 +99,11 @@
         document.getElementsByClassName('navbar-toggler')[0].addEventListener('click',function(){
             document.getElementsByClassName('list-group')[0].classList.toggle('show');
         })  
+
+        //carousel script
+        document.querySelector('.slide-2').addEventListener('click',function(){
+            document.querySelector('.slide-container').style.transform ='translateX(-100vw)';
+        })
     </script> 
 </body>
 </html>
