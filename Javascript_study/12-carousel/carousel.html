@@ -64,9 +64,9 @@
           </div>
         </div>
      </div> 
-     <button class="slide-1">1</button>
-     <button class="slide-2">2</button>
-     <button class="slide-3">3</button>
+     <button class="slide-1 slideBtn">1</button>
+     <button class="slide-2 slideBtn">2</button>
+     <button class="slide-3 slideBtn">3</button>
 
     <script>
         let count = 0;
@@ -108,6 +108,10 @@
         //carousel script
         document.querySelector('.slide-2').addEventListener('click',function(){
             document.querySelector('.slide-container').style.transform ='translateX(-100vw)';
+        })
+
+        document.querySelector('.slide-3').addEventListener('click',function(){
+            document.querySelector('.slide-container').style.transform ='translateX(-200vw)';
         })
     </script> 
 </body>
