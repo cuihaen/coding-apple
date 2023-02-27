@@ -67,6 +67,7 @@
      <button class="slide-1 slideBtn">1</button>
      <button class="slide-2 slideBtn">2</button>
      <button class="slide-3 slideBtn">3</button>
+     <button class="slide-next slideBtn">다음</button>
 
     <script>
         let count = 0;
@@ -116,6 +117,22 @@
 
         document.querySelector('.slide-1').addEventListener('click',function(){
             document.querySelector('.slide-container').style.transform ='translateX(0)';
+        })
+
+
+        //carousel 다음버튼 추가
+        var carouselIndex = 1;
+        document.querySelector('.slide-next').addEventListener('click',function(){
+            if(carouselIndex==1){
+                document.querySelector('.slide-container').style.transform ='translateX(-100vw)';
+                carouselIndex++;
+            }else if(carouselIndex==2){
+                document.querySelector('.slide-container').style.transform ='translateX(-200vw)';
+                carouselIndex++;
+            }else if(carouselIndex==3){
+                document.querySelector('.slide-container').style.transform ='translateX(0)';
+                carouselIndex=1;
+            }
         })
     </script> 
 </body>
