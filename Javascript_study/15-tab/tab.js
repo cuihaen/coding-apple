@@ -1,13 +1,13 @@
 for(let i = 0; i < document.querySelectorAll('.tab-button').length; i++){
     document.querySelectorAll('.tab-button')[i].addEventListener('click',function(){
-        document.querySelectorAll('.tab-button')[0].classList.remove('orange');
-        document.querySelectorAll('.tab-button')[1].classList.remove('orange');
-        document.querySelectorAll('.tab-button')[2].classList.remove('orange');
+        for(let j = 0; j < document.querySelectorAll('.tab-button').length; j++){
+            document.querySelectorAll('.tab-button')[j].classList.remove('orange');
+        }
         document.querySelectorAll('.tab-button')[i].classList.add('orange');
 
-        document.querySelectorAll('.tab-content')[0].classList.remove('show');
-        document.querySelectorAll('.tab-content')[1].classList.remove('show');
-        document.querySelectorAll('.tab-content')[2].classList.remove('show');
+        for(let j = 0; j < document.querySelectorAll('.tab-button').length; j++){
+            document.querySelectorAll('.tab-content')[j].classList.remove('show');
+        }
         document.querySelectorAll('.tab-content')[i].classList.add('show');
     })
 }
