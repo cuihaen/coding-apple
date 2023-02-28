@@ -101,10 +101,20 @@
         //특정 박스 속 내용을 다 읽었을 때 alret띄우기!
         //div박스 속 스크롤바 내린 양 + (눈에보이는 div자체의 높이) == div의 실제 높이
         document.querySelector('.lorem').addEventListener('scroll',function(){
-            document.querySelector('.lorem').scrollTop; //내린 양
-            document.querySelector('.lorem').scrollHeight;  //실제 div의 높이
-            document.querySelector('.lorem').clientHeight;  //눈에 보이는 div의 높이
+            var scrollheight = document.querySelector('.lorem').scrollTop; //내린 양
+            var realDivBox = document.querySelector('.lorem').scrollHeight;  //실제 div의 높이
+            var divBox = document.querySelector('.lorem').clientHeight;  //눈에 보이는 div의 높이
+
+            if(scrollheight + divBox > realDivBox - 10){
+                alert('다 읽으셨습니다.');
+            }
         })
+
+        //scroll 주의점 1. 1초에 60번 실행되므로 너무 많이 사용하는것 금지 / 2. 여러번 alert를 띄우는 오류 발생가능
+        //현재페이지 끝까지 스크롤 체크는? 
+        //document.querySelector('html').scrollHeight => 웹페이지 전체 높이, 현재페이지 모두 로드된 후가 정확
+        //document.querySelector('html').clientHeight => 페이지 보이는 부분 높이 = 브라우저 크기
+        //window.scrollY => 현재페이지 스크롤 양
     </script>
     <script>
 
