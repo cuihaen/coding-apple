@@ -62,6 +62,15 @@
           <div class="slide-box">
             <img src="car3.png">
           </div>
+          <div class="slide-box">
+            <img src="car1.png">
+          </div>
+          <div class="slide-box">
+            <img src="car2.png">
+          </div>
+          <div class="slide-box">
+            <img src="car3.png">
+          </div>
         </div>
      </div> 
      <button class="slide-1 slideBtn">1</button>
@@ -122,17 +131,28 @@
 
         //carousel 다음버튼 추가
         var carouselIndex = 1;
+        // document.querySelector('.slide-next').addEventListener('click',function(){
+        //     if(carouselIndex==1){
+        //         document.querySelector('.slide-container').style.transform ='translateX(-100vw)';
+        //         carouselIndex++;
+        //     }else if(carouselIndex==2){
+        //         document.querySelector('.slide-container').style.transform ='translateX(-200vw)';
+        //         carouselIndex++;
+        //     }else if(carouselIndex==3){
+        //         document.querySelector('.slide-container').style.transform ='translateX(0)';
+        //         carouselIndex=1;
+        //     }
+        // })
+        var carouselBox = document.querySelectorAll('.slide-container div').length;
+       
         document.querySelector('.slide-next').addEventListener('click',function(){
-            if(carouselIndex==1){
-                document.querySelector('.slide-container').style.transform ='translateX(-100vw)';
-                carouselIndex++;
-            }else if(carouselIndex==2){
-                document.querySelector('.slide-container').style.transform ='translateX(-200vw)';
-                carouselIndex++;
-            }else if(carouselIndex==3){
-                document.querySelector('.slide-container').style.transform ='translateX(0)';
-                carouselIndex=1;
-            }
+            document.querySelector('.slide-container').style.transform ='translateX(-'+carouselIndex+'00vw)';
+            console.log(carouselBox,carouselIndex);
+                if(carouselIndex<=carouselBox-1){
+                    carouselIndex++;
+                } else if(carouselIndex == carouselBox){
+                    carouselIndex==0;
+                }
         })
     </script> 
 </body>
