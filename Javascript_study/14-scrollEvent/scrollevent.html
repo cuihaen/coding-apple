@@ -13,6 +13,7 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">Navbar</span>
+          <span class="badge bg-dark ms-auto mx-3">Dark🌙</span>
           <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +49,42 @@
     <div class="alert alert-danger">
         5초 이내 구매시 사은품 증정!
     </div>
-    <span class="badge bg-dark ms-auto mx-3">Dark🌙</span>
+    <div class="lorem" style="width:200px;height:100px;overflow-y:scroll">
+    dgjslkjgldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjdsdgjslkj
+    gldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds dgjslkj
+    gldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds dgjslkj
+    gldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds dgjslkj
+    gldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds dgjslkj
+    gldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds dgjslkjgldjglgdjgkldjgkjskfjdaklfjldksjfkljgkjd
+    flkjgkdjskgjldkajglkjkvncxlkvxcijfiosdfodfjdskj
+    fksdjfisdigifdopskd;fjfajvdkjvlsdjkggfdugjlskfashd
+    jshfkjdhjgkfkgsdkljflkdsfkslnvlxcjhlksdjflkjsdklng
+    lkdshvljxclkjsldkjfklsdjlkxchvjkhjksdhfkjds     
+    </div>
 
     <script>
         //window가 스크롤 될때마다 함수를 실행해줌.
@@ -60,6 +96,14 @@
             }else{
                 document.querySelector('.navbar-brand').style.fontSize = 1 + 'em';
             }
+        })
+
+        //특정 박스 속 내용을 다 읽었을 때 alret띄우기!
+        //div박스 속 스크롤바 내린 양 + (눈에보이는 div자체의 높이) == div의 실제 높이
+        document.querySelector('.lorem').addEventListener('scroll',function(){
+            document.querySelector('.lorem').scrollTop; //내린 양
+            document.querySelector('.lorem').scrollHeight;  //실제 div의 높이
+            document.querySelector('.lorem').clientHeight;  //눈에 보이는 div의 높이
         })
     </script>
     <script>
