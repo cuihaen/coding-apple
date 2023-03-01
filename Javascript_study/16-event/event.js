@@ -30,7 +30,6 @@ document.querySelector('.black-bg').addEventListener('click',function(e){
     if(e.target == document.querySelector('.black-bg')){
         document.querySelector('.black-bg').style.display='none';
     }
-    
 })
 
 //이벤트 버블링 = 이벤트가 상위 html로 퍼지는 현상
