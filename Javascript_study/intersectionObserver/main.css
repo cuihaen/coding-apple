@@ -1,0 +1,13 @@
+body{
+    background:#333;
+    height:6000px;
+}
+
+div{
+    margin-top: 1000px;
+    color:#fff;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    transform: rotate(-720deg);
+}
