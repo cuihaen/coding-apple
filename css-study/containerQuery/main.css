@@ -1,0 +1,21 @@
+.cardContainer{
+    /* 새롭게 추가될 css속성 부모태그에 부여. 현재 crome에서는 지원하지 않아 테스트하려면 카나리아 버전을 받아 따로 저 기능을 켜줘야한다. */
+    /* 관련 강의링크 : https://youtu.be/4Vq8CQf-egI */
+    contain: style layout inline-size;
+    width: 50%;
+    border: 2px solid #0c3c4e;
+    padding:20px;
+    transition: all 1s
+}
+.cardContainer img{object-fit: contain;width:100%}
+
+.title{
+    font-size: 2em;
+}
+
+@container (max-width : 350px){
+    .title{
+        font-size: 1em;
+        color:#1b8ab3;
+    }
+}
