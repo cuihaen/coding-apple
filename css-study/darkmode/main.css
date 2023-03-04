@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    padding:10px 25px;
+    background: #fff;
+    color:#333;
+}
+
+@media (prefers-color-scheme : dark){
+    /* os에서 darkmode켜놓은 사용자에게만 적용됨 */
+    .nav{
+        display: flex;
+        padding:10px 25px;
+        background: #333;
+        color:#fff;
+    }
+}
+
+/* 기기에서 에니메이션 적용 꺼둔사람에게 적용되는 css */
+@media(prefers-reduced-motion){
+    
+}
