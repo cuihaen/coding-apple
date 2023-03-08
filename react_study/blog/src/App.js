@@ -30,7 +30,7 @@ function App() {
         <p>2023년 3월 8일 발행</p>
       </div>
       <div className="list">
-        <h4 onClick={()=>{setModal(true)}}>{ 글제목[2] } </h4>
+        <h4 onClick={()=>{setModal(!modal)}}>{ 글제목[2] } </h4>
         <p>2023년 3월 8일 발행</p>
       </div>
 
