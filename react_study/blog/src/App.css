@@ -19,6 +19,17 @@ div{
   border-bottom: 1px solid #666;
 }
 
+.modal{
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  margin:10px;
+}
+
+.modal h4{
+  background: #999;
+  padding: 20px
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
