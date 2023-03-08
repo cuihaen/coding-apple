@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+.blackNav{
+  display: flex;
+  background: #333;
+  width:100%;
+  color:#fff;
+  padding-left: 20px;
+}
 
 .App-logo {
   height: 40vmin;
