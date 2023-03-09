@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 function App() {
 
-  let post = '강남 우동 맛집';
   let [글제목, 글제목변경] = useState(['남자코트추천', '여자코트추천', 'react공부']);
   let [ 따봉, 따봉변경 ] = useState([0,0,0]);  //두번째 변수는 state변경용 함수임
   let [ modal, setModal] = useState(false);
@@ -31,6 +30,11 @@ function App() {
                 { 글제목[i] }
                 <span onClick = {()=>{let copy = [...따봉]; copy[i] = copy[i]+1; 따봉변경(copy)} } >👍🏻</span> { 따봉[i] } </h4>
               <p>2023년 3월 8일 발행</p>
+              <button onClick={()=>{
+                let copy = [...글제목];
+                copy.splice(i,1);
+                글제목변경(copy);
+              }}>삭제</button>
           </div>
           )
         })
@@ -38,6 +42,11 @@ function App() {
       
       <input onChange={(e)=>{inputTextChange(e.target.value);
                             console.log(inputText)}}/>
+      <button onClick={()=>{
+        let copy = [...글제목];
+        copy.unshift(inputText);
+        글제목변경(copy);
+      }}>글발행</button>
 
       {
         modal == true 
