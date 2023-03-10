@@ -4,9 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useState } from 'react';
+import data from './data.js';
 
 
 function App() {
+
+  let [shoes] = useState(data);
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
@@ -24,17 +28,17 @@ function App() {
         <Row>
           <Col>
             <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="80%" alt="신발1"/>
-            <h4>상품명</h4>
+            <h4>{shoes[0].title}</h4>
             <p>상품정보</p>
           </Col>
           <Col>
             <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="80%" alt="신발2"/>
-            <h4>상품명</h4>
+            <h4>{shoes[1].title}</h4>
             <p>상품정보</p>
           </Col>
           <Col>
             <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="80%" alt="신발3"/>
-            <h4>상품명</h4>
+            <h4>{shoes[2].title}</h4>
             <p>상품정보</p>
           </Col>
         </Row>
