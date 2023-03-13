@@ -12,15 +12,15 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">ShoeShop</Navbar.Brand>
+          <Navbar.Brand href="/">ShoeShop</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#detail">Detail</Nav.Link>
-            <Nav.Link href="#cart">Cart</Nav.Link>
+            <Link to="/">Home</Link>
+            <Link to="/detail">Detail</Link>
+            <Link to="/cart">Cart</Link>
           </Nav>
         </Container>
       </Navbar>
-
+    
       <Routes>
         <Route path="/" element={
           <>
