@@ -48,6 +48,8 @@ function App() {
         }/>
         <Route path = "/detail" element={<Detail />}/>
         <Route path = "/cart" element={<div>장바구니임</div>}/>
+        {/* pate="*" => 지정된 페이지 제외 모든 페이지 = 오류페이지(404page) */}
+        <Route path = "*" element={<div>없는 페이지임</div>}/>
       </Routes>
       </div>
   );
