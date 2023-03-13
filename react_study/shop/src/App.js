@@ -1,11 +1,8 @@
 import './App.css';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 import data from './data.js';
+import { Routes, Route, Link } from 'react-router-dom';
 
 
 function App() {
@@ -18,28 +15,37 @@ function App() {
           <Navbar.Brand href="#home">ShoeShop</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Products</Nav.Link>
-            <Nav.Link href="#pricing">Cart</Nav.Link>
+            <Nav.Link href="#detail">Detail</Nav.Link>
+            <Nav.Link href="#cart">Cart</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-      <div className="mainBg"></div>
-      <Container>
-        <Row>
-          {/* <Card shoes={shoes[0]} i={1}></Card>
-          <Card shoes={shoes[1]} i={2}></Card> */}
-          {
-            shoes.map(function(a,i){
-              // shoes.map((a,i)=>{})
-              return(
-              <Card shoes={shoes[i]} i={i}></Card>
-              )
 
-            })
-          }
-        </Row>
-    </Container>
-    </div>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <div className="mainBg"></div>
+            <Container>
+              <Row>
+                {/* <Card shoes={shoes[0]} i={1}></Card>
+                <Card shoes={shoes[1]} i={2}></Card> */}
+                {
+                  shoes.map(function(a,i){
+                    // shoes.map((a,i)=>{})
+                    return(
+                    <Card shoes={shoes[i]} i={i}></Card>
+                    )
+
+                  })
+                }
+              </Row>
+          </Container>
+          </>
+        }/>
+        <Route path = "/detail" element={<div>상세페이지임</div>}/>
+        <Route path = "/cart" element={<div>장바구니임</div>}/>
+      </Routes>
+      </div>
   );
 }
 
