@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 import data from './data.js';
 import { Routes, Route, Link } from 'react-router-dom';
+import Detail from './components/detail.js';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           </Container>
           </>
         }/>
-        <Route path = "/detail" element={<div>상세페이지임</div>}/>
+        <Route path = "/detail" element={<Detail />}/>
         <Route path = "/cart" element={<div>장바구니임</div>}/>
       </Routes>
       </div>
