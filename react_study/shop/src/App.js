@@ -26,25 +26,23 @@ function App() {
       <div className="mainBg"></div>
       <Container>
         <Row>
-          <Col>
-            <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="80%" alt="신발1"/>
-            <h4>{shoes[0].title}</h4>
-            <p>상품정보</p>
-          </Col>
-          <Col>
-            <img src="https://codingapple1.github.io/shop/shoes2.jpg" width="80%" alt="신발2"/>
-            <h4>{shoes[1].title}</h4>
-            <p>상품정보</p>
-          </Col>
-          <Col>
-            <img src="https://codingapple1.github.io/shop/shoes3.jpg" width="80%" alt="신발3"/>
-            <h4>{shoes[2].title}</h4>
-            <p>상품정보</p>
-          </Col>
+          <Card shoes={shoes[0]}></Card>
+          <Card shoes={shoes[1]}></Card>
+          <Card shoes={shoes[2]}></Card>
         </Row>
     </Container>
     </div>
   );
+}
+
+function Card(props){
+  return(
+    <Col>
+      <img src="https://codingapple1.github.io/shop/shoes1.jpg" width="80%" alt="신발2"/>
+      <h4>{props.shoes.title}</h4>
+      <p>{props.shoes.content}</p>
+    </Col>
+  )
 }
 
 export default App;
