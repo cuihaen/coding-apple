@@ -51,7 +51,18 @@
            <span class="car-title"></span>
            <span class="car-price"></span>
         </div>
-    </div> 
+    </div>
+    <form class="container my-5 form-group">
+        <p>상품선택</p>
+        <select class="form-select mt-2">
+          <option>모자</option>
+          <option>셔츠</option>
+        </select>
+        <select class="form-select mt-2 form-hide">
+            <option>95</option>
+            <option>100</option>
+        </select>
+    </form> 
     <div class="container mt-5">
         <ul class="list">
           <li class="tab-button">Products</li>
@@ -70,7 +81,23 @@
     </div> 
 
     <script>
-              var car = ['소나타',50000,'white'];
+
+        document.querySelectorAll('.form-select')[0].addEventListener('input',function(){
+            let value = document.querySelectorAll('.form-select')[0].value;
+            console.log(value);
+            if(value =='셔츠'){
+                document.querySelectorAll('.form-select')[1].classList.remove('form-hide');
+            }else{
+                document.querySelectorAll('.form-select')[1].classList.add('form-hide');
+            }
+        })
+
+    </script>
+    <script src="./tab.js"></script>
+    <script>
+
+        //array, object 자료 장단점 및 차이
+        var car = ['소나타',50000,'white'];
         // array자료![자료1,자료2,자료3...] 자료 간 순서 있음
         // object 안에 array자료를 넣을 수도 있음
         var car2 = {name:'소나타',price:[50000,30000,40000], color:'white'}
@@ -82,9 +109,6 @@
         document.querySelector('.car-title').innerHTML = car2.name;
         document.querySelector('.car-price').innerHTML = car2.price[1];
 
-    </script>
-    <script src="./tab.js"></script>
-    <script>
         //다크모드/라이트모드 전환
         let count = 0;
         document.querySelector('.badge').addEventListener('click',function(){
