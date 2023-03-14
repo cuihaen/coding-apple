@@ -72,14 +72,15 @@
     <script>
         var car = ['소나타',50000,'white'];
         // array자료![자료1,자료2,자료3...] 자료 간 순서 있음
-        var car2 = {name:'소나타',price:50000, color:'white'}
+        // object 안에 array자료를 넣을 수도 있음
+        var car2 = {name:'소나타',price:[50000,30000,40000], color:'white'}
         // abject자료! {이름1:자료1,이름2:자료2,이름3:자료3...} = key:value의 형태로 저장된다.
         // = 용도는 array와 같으나 값에 이름을 붙여 저장 가능하다는 장점, 자료간 순서 없음!
 
         car.sort();  //이렇게하면 car array자료 안에 있는 데이터가 가나다순으로 정렬된다.
 
         document.querySelector('.car-title').innerHTML = car2.name;
-        document.querySelector('.car-price').innerHTML = car2.price;
+        document.querySelector('.car-price').innerHTML = car2.price[1];
 
     </script>
     <script src="./tab.js"></script>
