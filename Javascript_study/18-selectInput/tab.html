@@ -57,13 +57,12 @@
         <select class="form-select mt-2">
           <option>모자</option>
           <option>셔츠</option>
+          <option>바지</option>
         </select>
         <select class="form-select mt-2 form-hide">
-            <option>95</option>
-            <option>100</option>
         </select>
     </form> 
-    <div id="test">
+    <div id="test" class="container mt-5">
 
     </div>
     <div class="container mt-5">
@@ -85,11 +84,19 @@
 
     <script>
 
-        // 자바스크립트로 html생성하기
-        let a = document.createElement('p');
-        a.innerHTML = '안녕';
+        // 자바스크립트로 html생성하기1 = 해당 방법이 좀 더 빠름.
+        // let a = document.createElement('p');
+        // a.innerHTML = '안녕';
+
         //찾은 영역 안에 코드 붙여넣기!
-        document.querySelector('#test').appendChild(a);
+        //document.querySelector('#test').appendChild(a);
+
+         // 자바스크립트로 html생성하기2 = 해당 방법이 훨씬 간편함.
+        let b = '<p>안녕</p>';
+        //insertAdjacentHTML(위치, HTML값) = 문자형 HTML 넣어주는 함수(안쪽 맨 밑, 추가할 문자)
+        document.querySelector('#test').insertAdjacentHTML('beforeend',b);
+
+     
 
 
         //셔츠 선택 시 input form 하나 더 나오게 하기!
@@ -98,8 +105,18 @@
             console.log(value);
             if(value =='셔츠'){
                 document.querySelectorAll('.form-select')[1].classList.remove('form-hide');
-            }else{
+                let b = `<option>95</option>
+                        <option>100</option>`;
+                document.querySelectorAll('.form-select')[1].innerHTML='';
+                document.querySelectorAll('.form-select')[1].insertAdjacentHTML('beforeend',b);
+            }else if(value =='모자'){
                 document.querySelectorAll('.form-select')[1].classList.add('form-hide');
+            }else if(value=='바지'){
+                document.querySelectorAll('.form-select')[1].classList.remove('form-hide');
+                let b = `<option>28</option>
+                        <option>30</option>`;
+                document.querySelectorAll('.form-select')[1].innerHTML='';
+                document.querySelectorAll('.form-select')[1].insertAdjacentHTML('beforeend',b);
             }
         })
 
