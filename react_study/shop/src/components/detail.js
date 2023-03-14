@@ -5,7 +5,8 @@ import styled from 'styled-components';
 
 let YellowBtn = styled.button`
 background : ${props=>props.bg};
-color:black;
+color:${props=>props.bg == 'blue' ? 'white' : 'black'};
+//만약 배경색이 blue라면 글자색을 하얀색으로, 아니면 블랙으로
 padding:10px;
 `
 
