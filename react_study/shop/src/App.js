@@ -2,7 +2,7 @@ import './App.css';
 import { Container, Nav, Navbar, Row, Col } from 'react-bootstrap';
 import { useState } from 'react';
 import data from './data.js';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, Outlet } from 'react-router-dom';
 import Detail from './components/detail.js';
 
 
@@ -47,8 +47,11 @@ function App() {
           </>
         }/>
         {/* Route를 바로 />로 닫지않고 별도로 닫아준 후 추가 Route를 사이에 넣으면 세부 페이지 링크를 걸 수 있음. 
-            = Nested Routes. 단 해당 내용을 보여주려면 넘어가는 페이지에 outlet을 활용해 보여줄 위치를 지정해야함 */}
-        <Route path="/detail" element={ <Detail shoes={shoes}/> }/> 
+            = Nested Routes. 단 해당 내용을 보여주려면 넘어가는 페이지에 outlet을 활용해 보여줄 위치를 지정해야함 
+          /detail/:id =>이렇게 해주면 url 파라미터!*/}
+        <Route path="/detail" element={<div><p>상세페이지임</p><Outlet></Outlet></div>}>
+          <Route path = ":id" element={<Detail shoes={shoes}/> }/>
+        </Route> 
         <Route path = "/cart" element={<div>장바구니임</div>}/>
         {/* pate="*" => 지정된 페이지 제외 모든 페이지 = 오류페이지(404page) */}
         <Route path = "*" element={<div>없는 페이지임</div>}/>
