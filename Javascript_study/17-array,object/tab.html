@@ -48,7 +48,8 @@
     </div>
     <div class="container mt-5">
         <div class="card p-3">
-            상품명 / 가격
+           <span class="car-title"></span>
+           <span class="car-price"></span>
         </div>
     </div> 
     <div class="container mt-5">
@@ -76,6 +77,9 @@
         // = 용도는 array와 같으나 값에 이름을 붙여 저장 가능하다는 장점, 자료간 순서 없음!
 
         car.sort();  //이렇게하면 car array자료 안에 있는 데이터가 가나다순으로 정렬된다.
+
+        document.querySelector('.car-title').innerHTML = car2.name;
+        document.querySelector('.car-price').innerHTML = car2.price;
 
     </script>
     <script src="./tab.js"></script>
