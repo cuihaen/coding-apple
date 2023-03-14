@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 let YellowBtn = styled.button`
-background : yellow;
+background : ${props=>props.bg};
 color:black;
 padding:10px;
 `
@@ -16,7 +16,7 @@ function Detail(props){
    });
     return(
         <Container>
-            <YellowBtn>버튼</YellowBtn>
+            <YellowBtn bg="blue">버튼</YellowBtn>
             <Row>
                 <Col>
                     <img src={'https://codingapple1.github.io/shop/shoes'+(findProduct.id+1)+'.jpg'} width="80%" alt="신발2"/>
