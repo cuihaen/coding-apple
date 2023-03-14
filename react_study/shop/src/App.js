@@ -48,10 +48,7 @@ function App() {
         }/>
         {/* Route를 바로 />로 닫지않고 별도로 닫아준 후 추가 Route를 사이에 넣으면 세부 페이지 링크를 걸 수 있음. 
             = Nested Routes. 단 해당 내용을 보여주려면 넘어가는 페이지에 outlet을 활용해 보여줄 위치를 지정해야함 */}
-        <Route path = "/detail" element={<Detail />}>
-          <Route path="product01" element = {<div>첫번째 상품임</div>} />
-          <Route path="product02" element = {<div>두번째 상품임</div>} />
-        </Route>
+        <Route path="/detail" element={ <Detail shoes={shoes}/> }/> 
         <Route path = "/cart" element={<div>장바구니임</div>}/>
         {/* pate="*" => 지정된 페이지 제외 모든 페이지 = 오류페이지(404page) */}
         <Route path = "*" element={<div>없는 페이지임</div>}/>
