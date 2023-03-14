@@ -63,6 +63,9 @@
             <option>100</option>
         </select>
     </form> 
+    <div id="test">
+
+    </div>
     <div class="container mt-5">
         <ul class="list">
           <li class="tab-button">Products</li>
@@ -82,6 +85,14 @@
 
     <script>
 
+        // 자바스크립트로 html생성하기
+        let a = document.createElement('p');
+        a.innerHTML = '안녕';
+        //찾은 영역 안에 코드 붙여넣기!
+        document.querySelector('#test').appendChild(a);
+
+
+        //셔츠 선택 시 input form 하나 더 나오게 하기!
         document.querySelectorAll('.form-select')[0].addEventListener('input',function(){
             let value = document.querySelectorAll('.form-select')[0].value;
             console.log(value);
