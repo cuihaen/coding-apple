@@ -1,4 +1,5 @@
 /* eslint-disable  */
+import { useEffect,useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -10,13 +11,25 @@ color:${props=>props.bg == 'blue' ? 'white' : 'black'};
 padding:10px;
 `
 
+
+
 function Detail(props){
+
+    useEffect(()=>{
+        console.log('안녕')
+    })
+
+    let [count,setCount] = useState(0);
+
+
    let {id} = useParams(); //현재 URL의 파라미터!
    let findProduct = props.shoes.find(function(x){
     return x.id == id
    });
     return(
         <Container>
+            {count}
+            <button onClick={()=>{setCount(count+1)}}>버튼</button>
             <YellowBtn bg="blue">버튼</YellowBtn>
             <Row>
                 <Col>
