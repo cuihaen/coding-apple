@@ -10,8 +10,7 @@ color:${props=>props.bg == 'blue' ? 'white' : 'black'};
 //만약 배경색이 blue라면 글자색을 하얀색으로, 아니면 블랙으로
 padding:10px;
 `
-
-
+//useEffect쓰는 이유 = 해당 영역 안에 있는 코드는 html렌더링 이후에 동작하기 때문.
 
 function Detail(props){
 
