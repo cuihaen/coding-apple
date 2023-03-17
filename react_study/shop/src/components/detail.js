@@ -11,6 +11,7 @@ color:${props=>props.bg == 'blue' ? 'white' : 'black'};
 padding:10px;
 `
 //useEffect쓰는 이유 = 해당 영역 안에 있는 코드는 html렌더링 이후에 동작하기 때문.
+//useEffect는 일반적으로 어려운 연산, 서버에서 데이터 가져오는 작업, 타이머 장착하는 코드 들을 안에 많이 적는다.
 
 function Detail(props){
 
