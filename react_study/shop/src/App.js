@@ -4,6 +4,7 @@ import { useState } from 'react';
 import data from './data.js';
 import { Routes, Route, useNavigate, Outlet } from 'react-router-dom';
 import Detail from './components/detail.js';
+import axios from 'axios';
 
 
 function App() {
@@ -56,6 +57,13 @@ function App() {
         {/* pate="*" => 지정된 페이지 제외 모든 페이지 = 오류페이지(404page) */}
         <Route path = "*" element={<div>없는 페이지임</div>}/>
       </Routes>
+      <button onClick={()=>{
+        //ajax이용한 GET요청은 axios.get('url')
+        axios.get('https://codingapple1.github.io/shop/data2.json').then((data)=>{ console.log(data.data) })
+        .catch(()=>{
+          console.log('서버와의 연결을 실패함')
+        })
+      }}>버튼</button>
       </div>
   );
 }
