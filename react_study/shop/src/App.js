@@ -67,6 +67,16 @@ function App() {
         }).catch(()=>{
           console.log('서버와의 연결을 실패함')
         })
+
+        //ajax에서 여러곳에서 ajax를 요청하고 싶다면?
+        //Promise.all([axios.get('/url1'),axios.get('/url2')])
+        //.then(()=>{
+          //두군데서 모두 정상적으로 값이 넘어왔을 때 처리할 요청사항 코드!
+        //})
+
+        //ajax이용한 POST요청은 axios.post('/url주소', {name:'kin'})
+        //axios.post('/shoesdetail', {name:'kim'})  //서버로 데이터를 전송하는 POST요청
+
       }}>더보기</button>
       </div>
   );
